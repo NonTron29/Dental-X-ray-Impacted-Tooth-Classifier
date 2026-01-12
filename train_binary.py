@@ -6,16 +6,11 @@ from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms, models
 from pathlib import Path
 
-# -----------------------------
-# Paths (EDIT THESE TWO)
-# -----------------------------
 BASE_DIR  = Path(__file__).resolve().parent
 CSV_PATH  = BASE_DIR / "labels_labeled_split.csv"   # has columns: filepath, impacted_binary, split
 DATA_ROOT = BASE_DIR / "Dental Xrays"               # folder that contains train/valid/test subfolders
 
-# -----------------------------
-# Dataset
-# -----------------------------
+
 class XrayDataset(Dataset):
     """
     Reads rows from CSV (optionally filtered by split), loads images.
@@ -69,6 +64,12 @@ class XrayDataset(Dataset):
         img = Image.open(p).convert("RGB")
         if self.transform:
             img = self.transform(img)
+        
+        fname = Path(str(row["filepath"])).name
+        p = self.name_to_path.get(fname)
+        if p is None:
+            raise FileNotFoundError(f"Missing image file: {fname}")
+
 
         return img, torch.tensor(y, dtype=torch.float32)
 

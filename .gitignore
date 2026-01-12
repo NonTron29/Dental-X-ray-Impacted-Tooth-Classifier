@@ -1,0 +1,55 @@
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+.env
+
+# Data (DO NOT COMMIT)
+Dental Xrays/
+data/
+*.jpg
+*.jpeg
+*.png
+*.JPG
+*.JPEG
+*.PNG
+
+# Model checkpoints (DO NOT COMMIT)
+*.pt
+*.pth
+*.ckpt
+
+# Logs / outputs
+*.log
+chosen_threshold.txt
+
+# Jupyter
+.ipynb_checkpoints/
+
+# data + datasets
+Dental Xrays/
+data/
+*.csv
+
+# model artifacts
+*.pt
+*.pth
+chosen_threshold.txt
+
+# mac + python junk
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
