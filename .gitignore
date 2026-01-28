@@ -4,20 +4,20 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Python cache
+# Python junk
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+.ipynb_checkpoints/
 
-# Virtual environments
+# Virtual envs
 .venv/
 venv/
 .env
 
-# Data (DO NOT COMMIT)
+# Data / datasets (DO NOT COMMIT)
 Dental Xrays/
 data/
+
 *.jpg
 *.jpeg
 *.png
@@ -25,31 +25,12 @@ data/
 *.JPEG
 *.PNG
 
-# Model checkpoints (DO NOT COMMIT)
+# CSVs you generate / download (DO NOT COMMIT)
+*.csv
+
+# Model artifacts / outputs (DO NOT COMMIT)
 *.pt
 *.pth
 *.ckpt
-
-# Logs / outputs
+chosen_threshold.txt
 *.log
-chosen_threshold.txt
-
-# Jupyter
-.ipynb_checkpoints/
-
-# data + datasets
-Dental Xrays/
-data/
-*.csv
-
-# model artifacts
-*.pt
-*.pth
-chosen_threshold.txt
-
-# mac + python junk
-.DS_Store
-__pycache__/
-*.pyc
-.venv/
-venv/
